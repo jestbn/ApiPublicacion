@@ -48,17 +48,17 @@ namespace ApiPublicacion.Controllers
         {
             using (var context = new PublicacionContext())
             {
-                var Publicacionact = context.Publicacion.FirstOrDefault(x => x.id == publicacion.Id);
-                Publicacionact.User = Publicacion.Cantidad;
-                Publicacionact.Descripcion = Publicacion.Descripcion;
-                Publicacionact.FechaPublicacion = Publicacion.Imagen;
-                Publicacionact.MeGusta = Publicacion.Nombre;
-                Publicacionact.MeDisgusta = Publicacion.Nombre;
-                Publicacionact.VecesCompartido = Publicacion.Nombre; // EsPrivada
-                Publicacionact.VecesCompartido = Publicacion.Nombre;
+                var Publicacionact = context.Publicacion.FirstOrDefault(x => x.Id == publicacion.Id);
+                Publicacionact.User = publicacion.User;
+                Publicacionact.Descripcion = publicacion.Descripcion;
+                Publicacionact.FechaPublicacion = publicacion.FechaPublicacion;
+                Publicacionact.MeGusta = publicacion.MeGusta;
+                Publicacionact.MeDisgusta = publicacion.MeDisgusta;
+                Publicacionact.VecesCompartido = publicacion.VecesCompartido; // 
+                Publicacionact.EsPrivada = publicacion.EsPrivada;
 
                 context.SaveChanges();
-                return Publicacion;
+                return publicacion;
             }
         }
         [HttpDelete]
