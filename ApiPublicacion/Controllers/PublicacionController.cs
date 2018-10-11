@@ -54,7 +54,7 @@ namespace ApiPublicacion.Controllers
                 Publicacionact.FechaPublicacion = publicacion.FechaPublicacion;
                 Publicacionact.MeGusta = publicacion.MeGusta;
                 Publicacionact.MeDisgusta = publicacion.MeDisgusta;
-                Publicacionact.VecesCompartido = publicacion.VecesCompartido; // 
+                Publicacionact.VecesCompartido = publicacion.VecesCompartido;
                 Publicacionact.EsPrivada = publicacion.EsPrivada;
 
                 context.SaveChanges();
